@@ -16,8 +16,418 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
+				<section data-auto-animate>
+					<h1>TypeScript</h1>
+				</section>
+				<section data-auto-animate>
+					<h1>What is</h1>
+					<h1>TypeScript</h1>
+				</section>
+				<section data-auto-animate>
+					<p><b>TypeScript</b> is a syntactic superset of JavaScript which adds static typing</p>
+				</section>
+				<section data-auto-animate>
+					<p><b>TypeScript</b> is a <i style="color: red;">syntactic superset</i> of JavaScript which adds static
+						typing</p>
+				</section>
+				<section>
+					<h2>Why should we use TypeScript?</h2>
+					<section>
+						<p>TypeScript uses compile time type checking. Which means it checks if the specified types match
+							before running the code, not while running the code.</p>
+					</section>
+				</section>
+				<section>
+					<h2>TypeScript Simple Types</h2>
+					<section data-auto-animate>
+						<ul>
+							<li>boolean</li>
+							<li>number</li>
+							<li>string</li>
+							<li>bigint</li>
+							<li>symbol</li>
+							<li>undefined</li>
+							<li>null</li>
+						</ul>
+					</section>
+					<section data-auto-animate>
+						<ul>
+							<li style="color: red;">boolean</li>
+							<li>number</li>
+							<li>string</li>
+							<li>bigint</li>
+							<li>symbol</li>
+							<li>undefined</li>
+							<li>null</li>
+						</ul>
+					</section>
+					<section data-auto-animate>
+						<ul>
+							<li>boolean</li>
+							<li style="color: red;">number</li>
+							<li>string</li>
+							<li>bigint</li>
+							<li>symbol</li>
+							<li>undefined</li>
+							<li>null</li>
+						</ul>
+					</section>
+					<section data-auto-animate>
+						<ul>
+							<li>boolean</li>
+							<li>number</li>
+							<li style="color: red;">string</li>
+							<li>bigint</li>
+							<li>symbol</li>
+							<li>undefined</li>
+							<li>null</li>
+						</ul>
+					</section>
+					<section data-auto-animate>
+						<ul>
+							<li>boolean</li>
+							<li>number</li>
+							<li>string</li>
+							<li style="color: red;">bigint</li>
+							<li>symbol</li>
+							<li>undefined</li>
+							<li>null</li>
+						</ul>
+					</section>
+					<section data-auto-animate>
+						<ul>
+							<li>boolean</li>
+							<li>number</li>
+							<li>string</li>
+							<li>bigint</li>
+							<li style="color: red;">symbol</li>
+							<li>undefined</li>
+							<li>null</li>
+						</ul>
+					</section>
+					<section data-auto-animate>
+						<ul>
+							<li>boolean</li>
+							<li>number</li>
+							<li>string</li>
+							<li>bigint</li>
+							<li>symbol</li>
+							<li style="color: red;">undefined</li>
+							<li>null</li>
+						</ul>
+					</section>
+					<section data-auto-animate>
+						<ul>
+							<li>boolean</li>
+							<li>number</li>
+							<li>string</li>
+							<li>bigint</li>
+							<li>symbol</li>
+							<li>undefined</li>
+							<li style="color: red;">null</li>
+						</ul>
+					</section>
+					<section data-background-gradient="linear-gradient(to bottom, #283b95, #17b2c3)" data-auto-animate>
+						<pre data-id="code-animation"><code code data-trim data-line-numbers="1">
+							let firstName: string = "Dylan";
+						</code></pre>
+					</section>
+					<section data-background-gradient="linear-gradient(to bottom, #283b95, #17b2c3)" data-auto-animate>
+						<pre data-id="code-animation"><code code data-trim data-line-numbers="2-5">
+							let firstName: string = "Dylan"; // type string
+		  firstName = 33; // attempts to re-assign the value to a different type
+						</code></pre>
+					</section>
+				</section>
+				<section>
+					<h2>TypeScript Special Types</h2>
+					<section data-auto-animate>
+						<ul>
+							<li>any</li>
+							<li>unknown</li>
+							<li>never</li>
+						</ul>
+					</section>
+					<section data-auto-animate>
+						<ul>
+							<li style="color: red;">any</li>
+							<li>unknown</li>
+							<li>never</li>
+						</ul>
+					</section>
+					<section data-auto-animate>
+						<pre data-id="code-animation"><code code data-trim data-line-numbers>
+							let u = true;
+							u = "string"; // Error: Type 'string' is not assignable to type 'boolean'.
+						</code></pre>
+					</section>
+					<section data-auto-animate>
+						<pre data-id="code-animation"><code code data-trim data-line-numbers>
+							let v: any = true;
+							v = "string"; // no error as it can be "any" type
+						</code></pre>
+					</section>
+					<section data-auto-animate>
+						<ul>
+							<li>any</li>
+							<li style="color: red;">unknown</li>
+							<li>never</li>
+						</ul>
+					</section>
+					<section data-auto-animate>
+						<pre data-id="code-animation"><code code data-trim data-line-numbers>
+							let w: unknown = 1;
+							w = "string"; // no error
+						</code></pre>
+					</section>
+					<section data-auto-animate>
+						<ul>
+							<li>any</li>
+							<li>unknown</li>
+							<li style="color: red;">never</li>
+						</ul>
+					</section>
+					<section data-auto-animate>
+						<pre data-id="code-animation"><code code data-trim data-line-numbers>
+							let x: never = true; // Error: Type 'boolean' is not assignable to type 'never'.
+						</code></pre>
+					</section>
+
+				</section>
+				<section>
+					<h2>TypeScript arrays</h2>
+					<section data-auto-animate>
+						<pre data-id="code-animation"><code code data-trim data-line-numbers>
+							const names: string[] = [];
+						</code></pre>
+					</section>
+					<section data-auto-animate>
+						<pre data-id="code-animation"><code code data-trim data-line-numbers>
+							const names: string[] = [];
+							names.push("Dylan"); // no error
+						</code></pre>
+					</section>
+					<section data-auto-animate>
+						<pre data-id="code-animation"><code code data-trim data-line-numbers>
+							const names: string[] = [];
+		  names.push("Dylan"); // no error
+		  // names.push(3); // Error: Argument of type 'number' is not assignable to parameter of type 'string'.
+						</code></pre>
+					</section>
+				</section>
+				<section>
+					<h2>TypeScript Tuples</h2>
+					<section data-auto-animate>
+						<pre data-id="code-animation"><code code data-trim data-line-numbers>
+							let ourTuple: [number, boolean, string];
+		</code></pre>
+					</section>
+					<section data-auto-animate>
+						<pre data-id="code-animation"><code code data-trim data-line-numbers>
+							// define our tuple
+	let ourTuple: [number, boolean, string];
+	// initialize correctly
+	ourTuple = [5, false, 'Coding God was here'];
+	// We have no type safety in our tuple for indexes 3+
+		</code></pre>
+					</section>
+					<section data-auto-animate>
+						<pre data-id="code-animation"><code code data-trim data-line-numbers>
+							// define our tuple
+							let ourTuple: [number, boolean, string];
+							// initialize correctly
+							ourTuple = [5, false, 'Coding God was here'];
+							// We have no type safety in our tuple for indexes 3+
+							ourTuple.push('Something new and wrong');
+							console.log(ourTuple);
+		</code></pre>
+					</section>
+				</section>
+				<section>
+					<h2>TypeScript Object Types</h2>
+					<section data-auto-animate>
+						<pre data-id="code-animation"><code code data-trim data-line-numbers>
+							const car: { type: string, model: string, year: number } = {
+								type: "Toyota",
+								model: "Corolla",
+								year: 2009
+							  };
+		</code></pre>
+					</section>
+					<section data-auto-animate>
+						<pre data-id="code-animation"><code code data-trim data-line-numbers>
+							const car = {
+								type: "Toyota",
+							  };
+		</code></pre>
+					</section>
+					<section data-auto-animate>
+						<pre data-id="code-animation"><code code data-trim data-line-numbers="4">
+							const car = {
+								type: "Toyota",
+							  };
+							  car.type = "Ford"; // no error
+							  car.type = 2; // Error: Type 'number' is not assignable to type 'string'.
+		</code></pre>
+					</section>
+					<section data-auto-animate>
+						<pre data-id="code-animation"><code code data-trim data-line-numbers="5">
+							const car = {
+								type: "Toyota",
+							  };
+							  car.type = "Ford"; // no error
+							  car.type = 2; // Error: Type 'number' is not assignable to type 'string'.
+		</code></pre>
+					</section>
+
+				</section>
+				<section>
+					<h2>TypeScript Enums</h2>
+					<section data-auto-animate>
+						<pre data-id="code-animation"><code code data-trim data-line-numbers>
+							enum CardinalDirections {
+								North,
+								East,
+								South,
+								West
+							  }
+						 </code></pre>
+					</section>
+				</section>
+				<section>
+					<h2>Type Aliases</h2>
+					<section data-auto-animate>
+						<pre data-id="code-animation"><code code data-trim data-line-numbers>
+							type CarYear = number
+							type CarType = string
+							type CarModel = string
+						 </code></pre>
+					</section>
+					<section data-auto-animate>
+						<pre data-id="code-animation"><code code data-trim data-line-numbers="4-8">
+							type CarYear = number
+	type CarType = string
+	type CarModel = string
+	type Car = {
+	  year: CarYear,
+	  type: CarType,
+	  model: CarModel
+	}
+						 </code></pre>
+					</section>
+					<section data-auto-animate>
+						<pre data-id="code-animation"><code code data-trim data-line-numbers="9-17">
+							type CarYear = number
+							type CarType = string
+							type CarModel = string
+							type Car = {
+							  year: CarYear,
+							  type: CarType,
+							  model: CarModel
+							}
+
+							const carYear: CarYear = 2001
+							const carType: CarType = "Toyota"
+							const carModel: CarModel = "Corolla"
+							const car: Car = {
+							  year: carYear,
+							  type: carType,
+							  model: carModel
+							};
+						 </code></pre>
+					</section>
+				</section>
+
+				<section>
+					<h2>TypeScript Union Types </h2>
+					<section data-auto-animate>
+						<pre data-id="code-animation"><code code data-trim data-line-numbers>
+							function printStatusCode(code: string | number) {
+								console.log(`My status code is ${code}.`)
+							  }
+							  printStatusCode(404);
+							  printStatusCode('404');
+						 </code></pre>
+					</section>
+					<section data-auto-animate>
+						<pre data-id="code-animation"><code code data-trim data-line-numbers="4">
+							function printStatusCode(code: string | number) {
+								console.log(`My status code is ${code}.`)
+							  }
+							  printStatusCode(404);
+							  printStatusCode('404');
+						 </code></pre>
+					</section>
+					<section data-auto-animate>
+						<pre data-id="code-animation"><code code data-trim data-line-numbers="5">
+							function printStatusCode(code: string | number) {
+								console.log(`My status code is ${code}.`)
+							  }
+							  printStatusCode(404);
+							  printStatusCode('404');
+						 </code></pre>
+					</section>
+				</section>
+
+				<section>
+					<h2>TypeScript Functions </h2>
+					<section>
+						<h3>Return Type</h3>
+					</section>
+					<section data-auto-animate>
+						<pre data-id="code-animation"><code code data-trim data-line-numbers>
+							// the `: number` here specifies that this function returns a number
+							function getTime(): number {
+							  return new Date().getTime();
+							}
+						 </code></pre>
+					</section>
+
+					<section>
+						<h3>Void Return Type</h3>
+					</section>
+					<section data-auto-animate>
+						<pre data-id="code-animation"><code code data-trim data-line-numbers>
+							function printHello(): void {
+								console.log('Hello!');
+							  }
+						 </code></pre>
+					</section>
+
+					<section>
+						<h3>Parameters</h3>
+					</section>
+					<section data-auto-animate>
+						<pre data-id="code-animation"><code code data-trim data-line-numbers>
+							function multiply(a: number, b: number) {
+								return a * b;
+							  }
+						 </code></pre>
+					</section>
+
+					<section>
+						<h3>Optional Parameters</h3>
+					</section>
+					<section data-auto-animate>
+						<pre data-id="code-animation"><code code data-trim data-line-numbers>
+							// the `?` operator here marks parameter `c` as optional
+	function add(a: number, b: number, c?: number) {
+	  return a + b + (c || 0);
+	}
+						 </code></pre>
+					</section>
+
+					<section>
+						<h3>Default Parameters</h3>
+					</section>
+					<section data-auto-animate>
+						<pre data-id="code-animation"><code code data-trim data-line-numbers>
+							function pow(value: number, exponent: number = 10) {
+								return value ** exponent;
+							  }
+						 </code></pre>
+					</section>
+				</section>
 			</div>
 		</div>
 
